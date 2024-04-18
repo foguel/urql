@@ -39,7 +39,7 @@ async function getReleaseBody(name, version) {
   const release = result.status === 200 ? result.data : undefined;
   if (!release || !release.body) return;
 
-  const title = ':package: [${tag}](<${release.html_url}>)\n';
+  const title = `:package: [${tag}](<${release.html_url}>)`;
   const body = formatBody(release.body);
   if (!body) return;
 
